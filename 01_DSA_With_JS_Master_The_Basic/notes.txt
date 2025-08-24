@@ -1,0 +1,25 @@
+// DSA 
+// Why we should you learn DSA?
+// DSA isliye karna chahiye kyoki vo ek human ko behtar 
+engineer banata 
+Uska logic behtar ho or better ho
+
+Compnay chalti kyoki app kam karte hia
+Understanding the core problem
+
+what is the main problem people face when it comes to DSA?
+patience dedication 
+dsa takes time
+you can see answer but khud se pahle pryas kiya ho 
+Yadi ko aapko bilkul nahi aata hai to you can see problem answer and then khud se solve karo
+
+Difficult to kucch bhi nahi hota vo sirph naya hota hai
+
+DSA koee language nahi hoti hai
+
+JS can do lots of thing
+
+DSA KA KOEE LEVEL NAHI HOTA hai
+
+TREES TAK KARNA chahiye
+You should do Graph if you above 9lpa  
