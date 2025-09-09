@@ -27,7 +27,7 @@
 // // console.log(arr)
 
 /*
-
+Left Rotation and Right Rotation by k element
 📌 Question: Left Rotate an Array by k Positions
 Problem Statement:
 You are given an array arr of length n and an integer k. 
@@ -39,18 +39,31 @@ the first element of the array moves to the end of the array,
 
 Your task is to return the array after performing k left rotations.
 */
-
 let arr = [1, 2, 3, 4, 5]
-// by 1 => [2, 3, 4, 5, 1] and by 2 => [3, 4, 5, 1, 2]
-let k = 2;
+let copy = new Array(arr.length)
+let k = 7
 k = k % arr.length
-let firstTwoElem = arr.slice(0, k)
-
-for (let i = 0; i < arr.length; i++) {
-  if (i < arr.length - k) {
-    arr[i] = arr[i + k]
-  } else {
-    arr[i] = firstTwoElem[i - (arr.length - k)]
+for (let j = 0; j < k; j++) {
+  let temp = arr[0] 
+  for (let i = 0; i < arr.length - 1; i++) {
+    copy[i] = arr[i + 1]
   }
+  copy[arr.length - 1] = temp
+  arr = [...copy]
 }
-console.log(arr) // [ 3, 4, 5, 1, 2 ]
+
+console.log(copy) //
+
+// by 1 => [2, 3, 4, 5, 1] and by 2 => [3, 4, 5, 1, 2]
+// let k = 2;
+// k = k % arr.length
+// let firstTwoElem = arr.slice(0, k)
+
+// for (let i = 0; i < arr.length; i++) {
+//   if (i < arr.length - k) {
+//     arr[i] = arr[i + k]
+//   } else {
+//     arr[i] = firstTwoElem[i - (arr.length - k)]
+//   }
+// }
+// console.log(arr) // [ 3, 4, 5, 1, 2 ]
