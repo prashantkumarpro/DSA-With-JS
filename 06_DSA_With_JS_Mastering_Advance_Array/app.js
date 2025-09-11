@@ -81,7 +81,7 @@ Your task is to return the array after performing k left rotations.
 
 // Right Rotate an Array by k Positions
 
-let arr = [1, 2, 3, 4, 5]
+// let arr = [1, 2, 3, 4, 5]
 
 // Brute force means trying all possible
 // solutions one by one until you find the
@@ -110,3 +110,41 @@ let arr = [1, 2, 3, 4, 5]
 //   copy[(i + k) % arr.length] = arr[i] // [,1,2,3,4]
 // }
 // console.log(copy)
+
+// let arr = [1, 2, 3, 4, 5]
+// left rotate by 1
+// [1, 2, 3, 4, 5] left by 1 => [2, 3, 4, 5, 1]
+// [1, 2, 3, 4, 5] left by 2 => [3, 4, 5, 1, 2]
+
+/* [1, 2, 3, 4, 5] [2, 3, 4, 5, 1] [3, 4, 5, 1, 2]
+   [ 2, 1, 3, 4, 5 ] => reverse 1, 2
+    [ 2, 1, 5, 4, 3 ] => reverse 3, 4, 5,
+     [ 3, 4, 5, 1, 2 ] => reverse  2, 1, 5, 4, 3
+*/
+
+// 🔥 Bravo! You just nailed the reverse algorithm for array rotation 
+// — and you did it with the optimized solution (O(n) time, O(1) space).
+
+// This is how we done Left rotation by k elem without extra space and without n square time compexility
+
+let arr = [1, 2, 3, 4, 5]
+let i = 0
+let k = 7
+k = k % arr.length
+
+reverse(i, k - 1)
+reverse(k, arr.length - 1)
+reverse(i, arr.length - 1)
+console.log(arr)
+
+function reverse (i, j) {
+  while (i < j) {
+    let temp = arr[i]
+    arr[i] = arr[j]
+    arr[j] = temp
+    i++
+    j--
+  }
+  //   console.log(arr)
+}
+
