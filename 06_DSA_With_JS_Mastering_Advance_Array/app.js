@@ -122,7 +122,7 @@ Your task is to return the array after performing k left rotations.
      [ 3, 4, 5, 1, 2 ] => reverse  2, 1, 5, 4, 3
 */
 
-// 🔥 Bravo! You just nailed the reverse algorithm for array rotation 
+// 🔥 Bravo! You just nailed the reverse algorithm for array rotation
 // — and you did it with the optimized solution (O(n) time, O(1) space).
 
 // This is how we done Left rotation by k elem without extra space and without n square time compexility
@@ -137,6 +137,8 @@ reverse(k, arr.length - 1)
 reverse(i, arr.length - 1)
 console.log(arr)
 
+
+
 function reverse (i, j) {
   while (i < j) {
     let temp = arr[i]
@@ -148,3 +150,28 @@ function reverse (i, j) {
   //   console.log(arr)
 }
 
+
+
+// Right rotation by k elem without extra space and without n square time compexility
+
+
+
+
+
+
+// Remove duplicates from sorted array
+
+// let nums = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4]
+// // Output: 5, nums = [0,1,2,3,4,_,_,_,_,_]
+// console.log(removeDuplicates(nums))
+
+// function removeDuplicates (nums) {
+//   let j = 1
+//   for (let i = 0; i < nums.length - 1; i++) {
+//     if (nums[i] != nums[i + 1]) {
+//       nums[j] = nums[i + 1]
+//       j++
+//     }
+//   }
+//   return j
+// }
